@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-
-
 def process_line(line):
     if " " not in line:
         return "No command or no argument given"
@@ -12,10 +10,10 @@ def process_line(line):
         return text.upper()
     if cmd == "lowercase":
         return text.lower()
+    if cmd == "count-words":            # ← TA NOUVELLE COMMANDE
+        return len(text.split())
 
     return "Unknown command " + cmd
-
-
 
 def main():
     while True:
@@ -25,8 +23,6 @@ def main():
             break
 
         print(process_line(line))
-
-
 
 if __name__ == "__main__":
     main()
