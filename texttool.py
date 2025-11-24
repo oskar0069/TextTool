@@ -13,6 +13,12 @@ def process_line(line):
 
 
 def process_line(line):
+    """
+    Analyse la ligne entrée par l’utilisateur : extrait la commande,
+    sépare le texte associé et exécute l’opération demandée
+    (uppercase, lowercase, count-words, length, etc.).
+    Retourne le résultat sous forme de chaîne de caractères.
+    """
     if " " not in line:
         return "No command or no argument given"
 
