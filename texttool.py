@@ -6,6 +6,7 @@ def process_line(line):
 
     cmd, text = line.split(" ", maxsplit=1)
 
+    # Commandes existantes
     if cmd == "uppercase":
         return text.upper()
     if cmd == "lowercase":
@@ -13,12 +14,15 @@ def process_line(line):
     if cmd == "count-words":            # ← TA NOUVELLE COMMANDE
         return len(text.split())
 
-    return "Unknown command " + cmd
+    # 🌟 Commande ajoutée par l'utilisateur A (Exercice 3)
+    # length → renvoie la longueur de text
+    if cmd == "length":
+        return str(len(text))
 
 def main():
     while True:
         try:
-            line = input("commade> ")
+            line = input("commande> ")
         except EOFError:
             break
 
