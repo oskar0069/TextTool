@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
 
+"""Simple command-line tool to apply text transformations to a line of text.
+
+This module reads commands such as 'uppercase', 'lowercase' (and others
+implemented in the exercises) and applies them to the given text.
+"""
+
+def process_line(line):
+    ...
+
+
+
+
 def process_line(line):
     if " " not in line:
         return "No command or no argument given"
