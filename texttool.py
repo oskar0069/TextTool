@@ -11,7 +11,10 @@ def process_line(line):
         return text.upper()
     if cmd == "lowercase":
         return text.lower()
+    if cmd == "count-words":            # ← TA NOUVELLE COMMANDE
+        return len(text.split())
 
+<<<<<<< HEAD
     # 🌟 Commande ajoutée par l'utilisateur C (Exercice 3)
     # prefix → renvoie les 10 premiers caractères du texte
     if cmd == "prefix":
@@ -19,6 +22,12 @@ def process_line(line):
 
     return "Unknown command " + cmd
 
+=======
+    # 🌟 Commande ajoutée par l'utilisateur A (Exercice 3)
+    # length → renvoie la longueur de text
+    if cmd == "length":
+        return str(len(text))
+>>>>>>> B/master
 
 def main():
     while True:
@@ -29,6 +38,9 @@ def main():
 
         print(process_line(line))
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> B/master
 if __name__ == "__main__":
     main()
