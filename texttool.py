@@ -30,6 +30,11 @@ def process_line(line):
 >>>>>>> B/master
 
 def main():
+    """Main loop of the TextTool command-line program.
+
+    Repeatedly prompts the user for a line, processes it with process_line,
+    prints the result, and stops when an EOF (Ctrl+D / Ctrl+Z) is received.
+    """
     while True:
         try:
             line = input("commande> ")
@@ -37,6 +42,7 @@ def main():
             break
 
         print(process_line(line))
+
 
 <<<<<<< HEAD
 
